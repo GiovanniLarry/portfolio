@@ -1,10 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
-// export default defineConfig(...) top-level config
+// Ensure assets load correctly from GitHub Pages repo path
 export default defineConfig({
+  base: '/portfoliome/', // <-- Added for GitHub Pages
   plugins: [react()],
+})
   // Ensure assets resolve correctly when hosted at /portfolio/
   base: '/portfolio/',
   server: {
