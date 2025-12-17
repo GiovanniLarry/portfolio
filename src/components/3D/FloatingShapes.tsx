@@ -3,7 +3,7 @@ import { useFrame } from '@react-three/fiber'
 import { Mesh } from 'three'
 
 const FloatingShapes = () => {
-  const shapes = [
+  const shapes: Array<{ position: [number, number, number]; rotation: [number, number, number]; color: string }> = [
     { position: [-3, 2, 0], rotation: [0, 0, 0], color: '#6366f1' },
     { position: [3, -1, 0], rotation: [0, 0, 0], color: '#8b5cf6' },
     { position: [0, 3, -2], rotation: [0, 0, 0], color: '#ec4899' },
@@ -20,7 +20,7 @@ const FloatingShapes = () => {
   )
 }
 
-const FloatingShape = ({ position, color }: { position: [number, number, number], color: string }) => {
+const FloatingShape = ({ position, color }: { position: [number, number, number]; color: string }) => {
   const meshRef = useRef<Mesh>(null)
 
   useFrame((state) => {
