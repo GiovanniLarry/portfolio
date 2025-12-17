@@ -65,7 +65,7 @@ const About = () => {
                   <p className="stat-label">Major Projects</p>
                 </div>
                 <div className="stat-item">
-                  <h3 className="stat-number">5</h3>
+                  <h3 className="stat-number">2</h3>
                   <p className="stat-label">Years Experience</p>
                 </div>
                 <div className="stat-item">
@@ -77,17 +77,17 @@ const About = () => {
 
             <motion.div className="about-image-wrapper" variants={itemVariants}>
               <div className="about-image glass">
-                <img 
-                  src="/profile-image.jpg" 
-                  alt="Touani Giovanni Larry" 
-                  className="profile-image"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.style.display = 'none';
-                    const placeholder = target.nextElementSibling as HTMLElement;
-                    if (placeholder) placeholder.style.display = 'flex';
-                  }}
-                />
+               <img
+  src={`${import.meta.env.BASE_URL}profile-image.jpg`}
+  alt="Touani Giovanni Larry"
+  className="profile-image"
+  onError={(e) => {
+    const target = e.target as HTMLImageElement;
+    target.style.display = 'none';
+    const placeholder = target.nextElementSibling as HTMLElement;
+    if (placeholder) placeholder.style.display = 'flex';
+  }}
+/>
                 <div className="image-placeholder" style={{ display: 'none' }}>
                   <div className="placeholder-content">
                     <span className="gradient-text">Touani G. Larry</span>
